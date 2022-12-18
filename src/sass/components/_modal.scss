@@ -50,17 +50,6 @@
   border-radius: 10px;
 }
 
-.buynow__btn--close {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-
-  padding: 0;
-
-  background-color: transparent;
-  border: none;
-}
-
 .buynow__title {
   font-family: 'Seymour One';
   font-weight: 400;
@@ -169,6 +158,12 @@
 
     &::before {
       background-image: url(../images/buy_now/ice1x.png);
+
+      @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url(../images/buy_now/ice2x.png);
+    }
     }
   }
 
@@ -183,6 +178,12 @@
 
     &::before {
       background-image: url(../images/buy_now/coffee1x.png);
+
+      @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url(../images/buy_now/coffee2x.png);
+    }
     }
   }
 
@@ -197,6 +198,12 @@
 
     &::before {
       background-image: url(../images/buy_now/msh1x.png);
+
+      @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url(../images/buy_now/msh2x.png);
+    }
     }
   }
 }
@@ -263,47 +270,5 @@
     font-size: 14px;
     line-height: 1.4;
     color: $secondary;
-  }
-}
-
-.buynow__btn {
-  padding: 12px 34px;
-
-  min-width: 114px;
-  height: 42px;
-
-  background-color: $accent-color;
-  border-radius: 10px;
-  border-color: transparent;
-
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 1.25;
-  color: $secondary;
-
-  @include mq(tablet, max) {
-    margin-right: 55px;
-    margin-left: 55px;
-  }
-
-  @include mq(tablet) {
-    margin-right: 169px;
-    margin-left: 169px;
-    min-width: 121px;
-    font-size: 14px;
-    line-height: 1.41;
-  }
-
-  &:hover {
-    background-color: $hov-foc;
-  }
-
-  &:focus {
-    background-color: $hov-foc;
-    color: $primary-color;
-  }
-
-  &:disabled {
-    background-color: $light-secondary-color;
   }
 }
